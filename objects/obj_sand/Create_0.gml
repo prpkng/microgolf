@@ -1,0 +1,1 @@
+vel_reduce_factor = 1.25;
