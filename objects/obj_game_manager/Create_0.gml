@@ -15,7 +15,7 @@ dbg_view("Room changer", false);
 
 
 
-dbg_room_to_change = room_lvl_1;
+dbg_room_to_change = room_lvl_01;
 dbg_drop_down(ref_create(self, "dbg_room_to_change"), asset_get_ids(asset_room), "room", "Next room");
 
 dbg_button("change", function () {
