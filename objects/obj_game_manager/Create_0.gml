@@ -8,7 +8,7 @@ is_debug_mode = false;
 depth = -32767;
 
 draw_set_font(fnt_pixel);
-scribble_font_set_default("fnt_pixel")
+scribble_font_set_default("fnt_arcade_os")
 
 
 dbg_view("Room changer", false);
@@ -24,3 +24,4 @@ dbg_button("change", function () {
 scribble_font_bake_outline_and_shadow("fnt_arcade", "fnt_arcade_os", 2, 2, SCRIBBLE_OUTLINE.FOUR_DIR, 1, false)
 
 show_debug_overlay(false);
+

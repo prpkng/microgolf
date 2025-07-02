@@ -10,3 +10,4 @@ if keyboard_check_pressed(ord("N")) {
 if keyboard_check_pressed(ord("B")) {
     room_goto_previous();
 }
+

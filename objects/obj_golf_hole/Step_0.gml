@@ -36,11 +36,17 @@ if win_counter > 20 {
     obj_ball.phy_linear_velocity_x = 0;
     obj_ball.phy_linear_velocity_y = 0;
     
-    alarm[0] = 120;
+    alarm[0] = 50;
 }
 
-flag.y = lerp(flag.y, (win_counter > 0 or has_won) ? flag_start_y - 8 : flag_start_y, 1.0 / 8.0);
+var _should_raise_flag = win_counter > 0 or (has_won and alarm[0] > 30);
+flag.y = lerp(flag.y, _should_raise_flag ? flag_start_y - 8 : flag_start_y, 1.0 / 8.0);
 
 if win_counter > 20 or has_won {
-    typewriter_counter += 1/3;
+    typewriter_counter += 1/3.25;
+}
+
+if has_won and obj_ball.image_xscale > 0.001 {
+    obj_ball.image_xscale /= 1.05;
+    obj_ball.image_yscale = obj_ball.image_xscale;
 }

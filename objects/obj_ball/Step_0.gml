@@ -36,6 +36,7 @@ if !is_hovering and is_dragging and mouse_check_button_released(mb_left) {
     phy_speed_y = 0;
     phy_linear_velocity_x = _dx;
     phy_linear_velocity_y = _dy;
+    phy_angular_velocity += choose(-100, 100);
 }
 
 
